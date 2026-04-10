@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سيارتي | أفخم معرض سيارات في المملكة</title>
+  <meta name="description" content="سيارتي - وجهتك الأولى لشراء أفخم السيارات الجديدة والمستعملة. نقدم لك تشكيلة واسعة من أرقى العلامات التجارية مع خدمة عملاء استثنائية وأسعار منافسة.">
+  <meta name="keywords" content="سيارات, سيارات فاخرة, معرض سيارات, سيارتي, بيع سيارات, سيارات جديدة, سيارات مستعملة">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- Page Loader -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-logo">سيارتي</div>
+    <div class="loader-bar"></div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#hero" onclick="closeMobileMenu()">الرئيسية</a>
+    <a href="#cars" onclick="closeMobileMenu()">السيارات</a>
+    <a href="#features" onclick="closeMobileMenu()">مميزاتنا</a>
+    <a href="#about" onclick="closeMobileMenu()">من نحن</a>
+    <a href="#testimonials" onclick="closeMobileMenu()">آراء العملاء</a>
+    <a href="#contact" onclick="closeMobileMenu()">تواصل معنا</a>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="navbar-brand">
+        <div class="logo-icon">
+          <i class="fas fa-car"></i>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">سيارتي</span>
+          <span class="brand-tagline">SAYARATI</span>
+        </div>
+      </a>
+
+      <div class="navbar-links" id="navLinks">
+        <a href="#hero" class="active">الرئيسية</a>
+        <a href="#cars">السيارات</a>
+        <a href="#features">مميزاتنا</a>
+        <a href="#about">من نحن</a>
+        <a href="#testimonials">آراء العملاء</a>
+        <a href="#contact">تواصل معنا</a>
+      </div>
+
+      <div class="navbar-cta">
+        <a href="#contact" class="btn btn-primary">
+          <i class="fas fa-phone"></i>
+          احجز موعد
+        </a>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="القائمة">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="images/hero-car.png" alt="سيارة فاخرة في معرض سيارتي">
+    </div>
+    <div class="hero-particles" id="heroParticles"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          معرض سيارات فاخرة منذ 2010
+        </div>
+        <h1 class="hero-title">
+          اكتشف <span class="gold-text highlight">أفخم السيارات</span>
+          <br>في مكان واحد
+        </h1>
+        <p class="hero-description">
+          نقدم لك تجربة شراء سيارات لا مثيل لها مع تشكيلة واسعة من أرقى العلامات التجارية العالمية وخيارات تمويل مرنة تناسب احتياجاتك
+        </p>
+        <div class="hero-actions">
+          <a href="#cars" class="btn btn-primary">
+            <i class="fas fa-car"></i>
+            تصفح السيارات
+          </a>
+          <a href="#about" class="btn btn-outline">
+            <i class="fas fa-play-circle"></i>
+            تعرف علينا
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="stat-number" data-target="2500">0</div>
+            <div class="stat-label">سيارة تم بيعها</div>
+          </div>
+          <div class="hero-stat">
+            <div class="stat-number" data-target="50">0</div>
+            <div class="stat-label">علامة تجارية</div>
+          </div>
+          <div class="hero-stat">
+            <div class="stat-number" data-target="15">0</div>
+            <div class="stat-label">سنة خبرة</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-mouse">
+        <div class="scroll-dot"></div>
+      </div>
+      <span>اسحب للأسفل</span>
+    </div>
+  </section>
+
+  <!-- Brands Marquee -->
+  <section class="brands-section">
+    <div class="brands-label">نتعامل مع أفخم العلامات التجارية</div>
+    <div style="overflow: hidden;">
+      <div class="brands-marquee" id="brandsMarquee">
+        <span class="brand-item">MERCEDES-BENZ</span>
+        <span class="brand-item">BMW</span>
+        <span class="brand-item">AUDI</span>
+        <span class="brand-item">LEXUS</span>
+        <span class="brand-item">PORSCHE</span>
+        <span class="brand-item">RANGE ROVER</span>
+        <span class="brand-item">TOYOTA</span>
+        <span class="brand-item">HYUNDAI</span>
+        <span class="brand-item">KIA</span>
+        <span class="brand-item">NISSAN</span>
+        <!-- Duplicate for seamless loop -->
+        <span class="brand-item">MERCEDES-BENZ</span>
+        <span class="brand-item">BMW</span>
+        <span class="brand-item">AUDI</span>
+        <span class="brand-item">LEXUS</span>
+        <span class="brand-item">PORSCHE</span>
+        <span class="brand-item">RANGE ROVER</span>
+        <span class="brand-item">TOYOTA</span>
+        <span class="brand-item">HYUNDAI</span>
+        <span class="brand-item">KIA</span>
+        <span class="brand-item">NISSAN</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Cars -->
+  <section class="featured-section section-padding" id="cars">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge">
+          <i class="fas fa-star"></i>
+          سياراتنا المميزة
+        </span>
+        <h2 class="section-title">اكتشف أحدث <span class="gold-text">السيارات</span></h2>
+        <p class="section-subtitle">تشكيلة حصرية من أفخم السيارات بأفضل الأسعار مع ضمان الجودة والموثوقية</p>
+      </div>
+
+      <div class="filter-tabs reveal">
+        <button class="filter-tab active" data-filter="all">الكل</button>
+        <button class="filter-tab" data-filter="sedan">سيدان</button>
+        <button class="filter-tab" data-filter="suv">دفع رباعي</button>
+        <button class="filter-tab" data-filter="sports">رياضية</button>
+        <button class="filter-tab" data-filter="electric">كهربائية</button>
+      </div>
+
+      <div class="cars-grid">
+        <!-- Car 1 -->
+        <div class="car-card reveal reveal-delay-1" data-category="sedan">
+          <div class="car-card-image">
+            <img src="images/car-sedan.png" alt="مرسيدس S-Class">
+            <span class="car-card-badge">جديدة</span>
+            <button class="car-card-fav" aria-label="إضافة للمفضلة"><i class="far fa-heart"></i></button>
+          </div>
+          <div class="car-card-body">
+            <h3 class="car-card-title">مرسيدس S-Class</h3>
+            <span class="car-card-year">2025 — سيدان فاخرة</span>
+            <div class="car-card-specs">
+              <span class="car-spec"><i class="fas fa-tachometer-alt"></i> 496 حصان</span>
+              <span class="car-spec"><i class="fas fa-gas-pump"></i> بنزين</span>
+              <span class="car-spec"><i class="fas fa-cog"></i> أوتوماتيك</span>
+            </div>
+            <div class="car-card-footer">
+              <div class="car-price">
+                <span class="currency">ر.س</span>850,000
+              </div>
+              <a href="#" class="car-card-link">
+                التفاصيل
+                <i class="fas fa-arrow-left"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Car 2 -->
+        <div class="car-card reveal reveal-delay-2" data-category="suv">
+          <div class="car-card-image">
+            <img src="images/car-suv.png" alt="رينج روفر فوج">
+            <span class="car-card-badge">مميزة</span>
+            <button class="car-card-fav" aria-label="إضافة للمفضلة"><i class="far fa-heart"></i></button>
+          </div>
+          <div class="car-card-body">
+            <h3 class="car-card-title">رينج روفر فوج</h3>
+            <span class="car-card-year">2025 — دفع رباعي فاخر</span>
+            <div class="car-card-specs">
+              <span class="car-spec"><i class="fas fa-tachometer-alt"></i> 523 حصان</span>
+              <span class="car-spec"><i class="fas fa-gas-pump"></i> بنزين</span>
+              <span class="car-spec"><i class="fas fa-cog"></i> أوتوماتيك</span>
+            </div>
+            <div class="car-card-footer">
+              <div class="car-price">
+                <span class="currency">ر.س</span>920,000
+              </div>
+              <a href="#" class="car-card-link">
+                التفاصيل
+                <i class="fas fa-arrow-left"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Car 3 -->
+        <div class="car-card reveal reveal-delay-3" data-category="sports">
+          <div class="car-card-image">
+            <img src="images/car-sports.png" alt="بورش 911 GT3">
+            <span class="car-card-badge">رياضية</span>
+            <button class="car-card-fav" aria-label="إضافة للمفضلة"><i class="far fa-heart"></i></button>
+          </div>
+          <div class="car-card-body">
+            <h3 class="car-card-title">بورش 911 GT3</h3>
+            <span class="car-card-year">2025 — سيارة رياضية</span>
+            <div class="car-card-specs">
+              <span class="car-spec"><i class="fas fa-tachometer-alt"></i> 502 حصان</span>
+              <span class="car-spec"><i class="fas fa-gas-pump"></i> بنزين</span>
+              <span class="car-spec"><i class="fas fa-cog"></i> PDK</span>
+            </div>
+            <div class="car-card-footer">
+              <div class="car-price">
+                <span class="currency">ر.س</span>1,200,000
+              </div>
+              <a href="#" class="car-card-link">
+                التفاصيل
+                <i class="fas fa-arrow-left"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Car 4 -->
+        <div class="car-card reveal reveal-delay-1" data-category="electric">
+          <div class="car-card-image">
+            <img src="images/car-electric.png" alt="BMW iX">
+            <span class="car-card-badge">كهربائية</span>
+            <button class="car-card-fav" aria-label="إضافة للمفضلة"><i class="far fa-heart"></i></button>
+          </div>
+          <div class="car-card-body">
+            <h3 class="car-card-title">BMW iX xDrive50</h3>
+            <span class="car-card-year">2025 — كهربائية بالكامل</span>
+            <div class="car-card-specs">
+              <span class="car-spec"><i class="fas fa-tachometer-alt"></i> 516 حصان</span>
+              <span class="car-spec"><i class="fas fa-bolt"></i> كهربائي</span>
+              <span class="car-spec"><i class="fas fa-cog"></i> أوتوماتيك</span>
+            </div>
+            <div class="car-card-footer">
+              <div class="car-price">
+                <span class="currency">ر.س</span>680,000
+              </div>
+              <a href="#" class="car-card-link">
+                التفاصيل
+                <i class="fas fa-arrow-left"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Car 5 -->
+        <div class="car-card reveal reveal-delay-2" data-category="sedan">
+          <div class="car-card-image">
+            <img src="images/car-luxury.png" alt="أودي A8">
+            <span class="car-card-badge">حصرية</span>
+            <button class="car-card-fav" aria-label="إضافة للمفضلة"><i class="far fa-heart"></i></button>
+          </div>
+          <div class="car-card-body">
+            <h3 class="car-card-title">أودي A8 L</h3>
+            <span class="car-card-year">2025 — سيدان تنفيذية</span>
+            <div class="car-card-specs">
+              <span class="car-spec"><i class="fas fa-tachometer-alt"></i> 453 حصان</span>
+              <span class="car-spec"><i class="fas fa-gas-pump"></i> بنزين</span>
+              <span class="car-spec"><i class="fas fa-cog"></i> أوتوماتيك</span>
+            </div>
+            <div class="car-card-footer">
+              <div class="car-price">
+                <span class="currency">ر.س</span>750,000
+              </div>
+              <a href="#" class="car-card-link">
+                التفاصيل
+                <i class="fas fa-arrow-left"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Car 6 -->
+        <div class="car-card reveal reveal-delay-3" data-category="suv">
+          <div class="car-card-image">
+            <img src="images/car-suv.png" alt="لكزس LX 600">
+            <span class="car-card-badge">وصل حديثاً</span>
+            <button class="car-card-fav" aria-label="إضافة للمفضلة"><i class="far fa-heart"></i></button>
+          </div>
+          <div class="car-card-body">
+            <h3 class="car-card-title">لكزس LX 600</h3>
+            <span class="car-card-year">2025 — دفع رباعي فاخر</span>
+            <div class="car-card-specs">
+              <span class="car-spec"><i class="fas fa-tachometer-alt"></i> 409 حصان</span>
+              <span class="car-spec"><i class="fas fa-gas-pump"></i> بنزين</span>
+              <span class="car-spec"><i class="fas fa-cog"></i> أوتوماتيك</span>
+            </div>
+            <div class="car-card-footer">
+              <div class="car-price">
+                <span class="currency">ر.س</span>560,000
+              </div>
+              <a href="#" class="car-card-link">
+                التفاصيل
+                <i class="fas fa-arrow-left"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: var(--space-xl);" class="reveal">
+        <a href="#" class="btn btn-outline">
+          <i class="fas fa-th-large"></i>
+          عرض جميع السيارات
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Counters -->
+  <section class="counter-section section-padding" id="counters">
+    <div class="container">
+      <div class="counters-grid">
+        <div class="counter-item reveal">
+          <div class="counter-number" data-target="2500">0</div>
+          <div class="counter-label">سيارة تم بيعها</div>
+        </div>
+        <div class="counter-item reveal reveal-delay-1">
+          <div class="counter-number" data-target="50">0</div>
+          <div class="counter-label">علامة تجارية</div>
+        </div>
+        <div class="counter-item reveal reveal-delay-2">
+          <div class="counter-number" data-target="98">0</div>
+          <div class="counter-label">% رضا العملاء</div>
+        </div>
+        <div class="counter-item reveal reveal-delay-3">
+          <div class="counter-number" data-target="15">0</div>
+          <div class="counter-label">سنة خبرة</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features / Why Us -->
+  <section class="features-section section-padding" id="features">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge">
+          <i class="fas fa-crown"></i>
+          لماذا سيارتي؟
+        </span>
+        <h2 class="section-title">مميزات <span class="gold-text">تجعلنا الأفضل</span></h2>
+        <p class="section-subtitle">نسعى دائماً لتقديم أفضل تجربة لعملائنا من خلال خدمات متكاملة ومميزة</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card reveal reveal-delay-1">
+          <div class="feature-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3 class="feature-title">ضمان شامل</h3>
+          <p class="feature-desc">نقدم ضمان شامل على جميع سياراتنا مع خدمة صيانة مجانية لمدة عام كامل</p>
+        </div>
+
+        <div class="feature-card reveal reveal-delay-2">
+          <div class="feature-icon">
+            <i class="fas fa-hand-holding-usd"></i>
+          </div>
+          <h3 class="feature-title">تمويل مرن</h3>
+          <p class="feature-desc">خيارات تمويل متعددة بالتعاون مع أفضل البنوك والمؤسسات المالية بأقل نسبة ربح</p>
+        </div>
+
+        <div class="feature-card reveal reveal-delay-3">
+          <div class="feature-icon">
+            <i class="fas fa-search-dollar"></i>
+          </div>
+          <h3 class="feature-title">فحص دقيق</h3>
+          <p class="feature-desc">كل سيارة تخضع لفحص شامل من 200 نقطة بواسطة خبراء متخصصين قبل عرضها</p>
+        </div>
+
+        <div class="feature-card reveal reveal-delay-4">
+          <div class="feature-icon">
+            <i class="fas fa-truck"></i>
+          </div>
+          <h3 class="feature-title">توصيل مجاني</h3>
+          <p class="feature-desc">خدمة توصيل مجانية لجميع أنحاء المملكة مع إمكانية التجربة قبل الشراء</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section section-padding" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-wrapper reveal">
+          <div class="about-image">
+            <img src="images/car-luxury.png" alt="معرض سيارتي">
+          </div>
+          <div class="about-float-card">
+            <div class="float-icon">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <div>
+              <div class="float-number">+15</div>
+              <div class="float-label">عام من التميز</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content reveal reveal-delay-2">
+          <span class="section-badge">
+            <i class="fas fa-info-circle"></i>
+            من نحن
+          </span>
+          <h2 class="section-title">رحلة <span class="gold-text">التميز</span> تبدأ هنا</h2>
+          <p class="section-subtitle">
+            منذ تأسيسنا في عام 2010، نسعى لتقديم أفضل تجربة شراء سيارات في المملكة. نحن نؤمن بأن شراء سيارة يجب أن يكون تجربة ممتعة وموثوقة، ولهذا نحرص على تقديم أعلى معايير الجودة والشفافية.
+          </p>
+          <div class="about-features">
+            <div class="about-feature-item">
+              <span class="check-icon"><i class="fas fa-check"></i></span>
+              <span>فحص شامل لجميع السيارات قبل العرض</span>
+            </div>
+            <div class="about-feature-item">
+              <span class="check-icon"><i class="fas fa-check"></i></span>
+              <span>فريق خبراء متخصص في عالم السيارات</span>
+            </div>
+            <div class="about-feature-item">
+              <span class="check-icon"><i class="fas fa-check"></i></span>
+              <span>خدمة ما بعد البيع ودعم فني على مدار الساعة</span>
+            </div>
+            <div class="about-feature-item">
+              <span class="check-icon"><i class="fas fa-check"></i></span>
+              <span>أسعار تنافسية وعروض حصرية مستمرة</span>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-primary">
+            <i class="fas fa-headset"></i>
+            تواصل معنا
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials-section section-padding" id="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge">
+          <i class="fas fa-comments"></i>
+          آراء العملاء
+        </span>
+        <h2 class="section-title">ماذا يقول <span class="gold-text">عملاؤنا</span></h2>
+        <p class="section-subtitle">نفتخر بثقة عملائنا ورضاهم عن خدماتنا وتجربتهم المميزة معنا</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal reveal-delay-1">
+          <span class="testimonial-quote">"</span>
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">
+            تجربة رائعة من البداية للنهاية. الفريق كان محترفاً جداً وساعدني في اختيار السيارة المناسبة. الأسعار ممتازة مقارنة بالسوق.
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">أ م</div>
+            <div class="testimonial-author-info">
+              <div class="author-name">أحمد محمد</div>
+              <div class="author-title">رجل أعمال — الرياض</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal reveal-delay-2">
+          <span class="testimonial-quote">"</span>
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">
+            اشتريت سيارتي الأولى من سيارتي وكانت التجربة مذهلة. خدمة التمويل كانت سهلة وسريعة، والسيارة وصلت بحالة ممتازة.
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">خ ع</div>
+            <div class="testimonial-author-info">
+              <div class="author-name">خالد العمري</div>
+              <div class="author-title">مهندس — جدة</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal reveal-delay-3">
+          <span class="testimonial-quote">"</span>
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <p class="testimonial-text">
+            أنصح الجميع بزيارة معرض سيارتي. التشكيلة واسعة والأسعار معقولة جداً. خدمة ما بعد البيع ممتازة والفريق ودود ومتعاون.
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">ف س</div>
+            <div class="testimonial-author-info">
+              <div class="author-name">فهد السالم</div>
+              <div class="author-title">طبيب — الدمام</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / Contact -->
+  <section class="cta-section" id="contact">
+    <div class="container">
+      <div class="cta-card reveal">
+        <h2 class="cta-title">جاهز لتجد <span class="gold-text">سيارة أحلامك؟</span></h2>
+        <p class="cta-subtitle">تواصل معنا الآن واحصل على استشارة مجانية من خبرائنا. نحن هنا لمساعدتك في كل خطوة.</p>
+        <div class="cta-actions">
+          <a href="tel:+966500000000" class="btn btn-primary">
+            <i class="fas fa-phone"></i>
+            اتصل بنا الآن
+          </a>
+          <a href="https://wa.me/966500000000" class="btn btn-outline" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            واتساب
+          </a>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div>
+              <div class="contact-card-label">العنوان</div>
+              <div class="contact-card-value" style="direction: rtl;">طريق الملك فهد، الرياض</div>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div>
+              <div class="contact-card-label">الهاتف</div>
+              <div class="contact-card-value">+966 50 000 0000</div>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div>
+              <div class="contact-card-label">ساعات العمل</div>
+              <div class="contact-card-value" style="direction: rtl;">السبت - الخميس | 9 ص - 10 م</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-name">سيارتي</div>
+          <p class="brand-desc">
+            وجهتك الأولى لشراء أفخم السيارات في المملكة العربية السعودية. نقدم تشكيلة واسعة من أرقى العلامات التجارية مع خدمة عملاء استثنائية.
+          </p>
+          <div class="footer-social">
+            <a href="#" aria-label="تويتر"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" aria-label="إنستغرام"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="سناب شات"><i class="fab fa-snapchat-ghost"></i></a>
+            <a href="#" aria-label="يوتيوب"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">روابط سريعة</h3>
+          <div class="footer-links">
+            <a href="#hero">الرئيسية</a>
+            <a href="#cars">السيارات</a>
+            <a href="#features">مميزاتنا</a>
+            <a href="#about">من نحن</a>
+            <a href="#contact">تواصل معنا</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">خدماتنا</h3>
+          <div class="footer-links">
+            <a href="#">بيع السيارات</a>
+            <a href="#">شراء السيارات</a>
+            <a href="#">خدمات التمويل</a>
+            <a href="#">الفحص والتقييم</a>
+            <a href="#">خدمات التأمين</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">المعرض</h3>
+          <div class="footer-links">
+            <a href="#">سيارات جديدة</a>
+            <a href="#">سيارات مستعملة</a>
+            <a href="#">سيارات كهربائية</a>
+            <a href="#">عروض خاصة</a>
+            <a href="#">أخبار السيارات</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 سيارتي. جميع الحقوق محفوظة</p>
+        <div class="footer-bottom-links">
+          <a href="#">سياسة الخصوصية</a>
+          <a href="#">الشروط والأحكام</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
